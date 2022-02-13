@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "this is test node 1",
   "main": "server.ts",
+  "bin": "./dist/app/server.js",
   "scripts": {
     "test": "npm run debug",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "pkg": "tsc && pkg ./ -t node14-win-x64 --output testNode1.exe"
   },
   "author": "hdh",
   "license": "ISC",
@@ -13,6 +15,8 @@
     "@types/node": "^17.0.16"
   },
   "dependencies": {
+    "express": "^4.17.2",
+    "pkg": "^5.5.2",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   }
